@@ -11,7 +11,7 @@ let ourToogleBtn = document.querySelector(".tooglebtn");
 function weatherDisplay(city) {
    city = ourInputField.value;
    
-   fetch("http://api.openweathermap.org/data/2.5/weather?q="+ city + "&appid=c0312c2332102d7ad1142b4883c4c225", {
+   fetch("https://api.openweathermap.org/data/2.5/weather?q="+ city + "&appid=c0312c2332102d7ad1142b4883c4c225", {
       mode: 'cors' })
    .then(function(Response) {
      return Response;
@@ -23,7 +23,7 @@ function weatherDisplay(city) {
      console.log(info);
      ourcityName.textContent = info.name;
      ourWeather.textContent = info.weather[0].main;
-     ourTemp.textContent = info.main.temp;
+     ourTemp.textContent = Math.round((info.main.temp - 273.15) * 9/5 + 32);
      
      fetchGifFn(info.weather[0].main);
    })
