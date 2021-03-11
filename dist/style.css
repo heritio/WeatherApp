@@ -3,3 +3,61 @@
     margin: 0;
     padding: 0;
 }
+
+h1{
+    text-align: center;
+    margin: 20px auto;
+}
+
+#content{
+    width: 450px;
+    height: max-content;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    background-color: gold;
+}
+#content > *{
+    margin:20px auto;
+}
+
+.textcont{
+    text-align: center;
+}
+.textcont > *{
+    margin: 20px;
+}
+
+.nameinputfield{
+    height: 30px;
+    border: 2px solid rebeccapurple;
+    background-color: rgb(221, 221, 221);
+    color: rgb(0, 0, 0);
+}
+.nameinputfield:focus{
+    background-color: rgb(255, 255, 255);
+    outline: none;
+}
+.btnstyle{
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: bolder;
+    border: none;
+    outline: none;
+}
+.btnstyle:hover{
+    background-color: rgb(248, 235, 203);
+}
+
+.resultdisp{
+    width: 70%;
+    margin: 20px auto;
+}
+
+.tooglebtn{
+    margin: auto 20px;
+}
+.ourstyle{
+    color: red;
+}
